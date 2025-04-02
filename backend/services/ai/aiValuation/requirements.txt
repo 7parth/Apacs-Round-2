@@ -1,0 +1,29 @@
+# Flask for building the API
+Flask==2.3.2
+
+# Flask extensions for additional functionality
+Flask-Cors==3.0.10  # For handling Cross-Origin Resource Sharing
+Flask-JWT-Extended==4.4.4  # For JWT-based authentication
+Flask-SQLAlchemy==3.0.5  # For database ORM
+
+# Database drivers
+psycopg2-binary==2.9.7  # PostgreSQL driver
+mysql-connector-python==8.1.0  # MySQL driver
+
+# Web3.py for blockchain interaction
+web3==6.5.0
+
+# Requests for making HTTP requests
+requests==2.31.0
+
+# Pandas for data manipulation
+pandas==2.1.1
+
+# NumPy for numerical computations
+numpy==1.26.0
+
+# Gunicorn for running the app in production
+gunicorn==21.2.0
+
+# dotenv for environment variable management
+python-dotenv==1.0.0
