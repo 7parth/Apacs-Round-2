@@ -18,19 +18,26 @@ import userRoutes from "./routes/userRoutes.js";
 import assetsRoutes from "./routes/assetsRoutes.js"; // Import the new assets route module
 
 // Destructure PORT and URI from environment variables
-const { PORT, URI } = process.env;
+const { MONGO_URI, PORT } = process.env;
 
 // Create an Express application instance
 const app = express();
-
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
 // Apply middlewares
+app.use(cors({
+  origin: '*', // Allow all origins (adjust as needed for security)
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+}));
 app.use(cors()); // Enable Cross-Origin Resource Sharing
 app.use(express.json()); // Parse JSON bodies in requests
 app.use(cookieParser()); // Parse cookies attached to the client request
 
 // Connect to MongoDB using Mongoose
 mongoose
-  .connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to database"))
   .catch((err) => console.error("Database connection error:", err));
 
