@@ -41,18 +41,63 @@ To get started with IntelliTrade, follow these steps:
 The project is organized as follows:
 
 ```
-IntelliTrade/
-├── src/                # Source code for the application
-│   ├── components/     # Reusable UI components
-│   ├── pages/          # Application pages
-│   ├── services/       # API and backend service integrations
-│   ├── utils/          # Utility functions and helpers
-│   └── index.js        # Application entry point
-├── public/             # Static assets
-├── .env                # Environment variables
-├── package.json        # Project dependencies and scripts
-├── README.md           # Project documentation
-└── LICENSE             # License information
+apacs2/
+├── Apacs-Round-2/
+│   ├── BlockChain/
+│   │   ├── lib/
+│   │   │   ├── openzeppelin-contracts/
+│   │   │   │   ├── certora/
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── patches/
+│   │   │   │   │   │   ├── example.patch
+│   │   │   │   │   │   └── ...other patch files...
+│   │   │   │   │   ├── README.md
+│   │   │   │   └── ...other files...
+│   │   ├── contracts/
+│   │   │   ├── MyContract.sol
+│   │   │   └── ...other Solidity files...
+│   │   └── ...other files...
+│   ├── backend/
+│   │   ├── routes/
+│   │   │   ├── authRoutes.js
+│   │   │   ├── marketRoutes.js
+│   │   │   ├── paymentRoutes.js
+│   │   │   ├── adminRoutes.js
+│   │   │   ├── userRoutes.js
+│   │   │   ├── assetsRoutes.js
+│   │   │   └── ...other route files...
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Asset.js
+│   │   │   └── ...other model files...
+│   │   ├── controllers/
+│   │   │   ├── authController.js
+│   │   │   ├── marketController.js
+│   │   │   └── ...other controller files...
+│   │   ├── server.js
+│   │   ├── .env
+│   │   ├── package.json
+│   │   └── ...other backend files...
+│   ├── frontend/
+│   │   ├── src/
+│   │   │   ├── components/
+│   │   │   │   ├── Navbar.js
+│   │   │   │   ├── Footer.js
+│   │   │   │   └── ...other components...
+│   │   │   ├── pages/
+│   │   │   │   ├── Home.js
+│   │   │   │   ├── Dashboard.js
+│   │   │   │   └── ...other pages...
+│   │   │   ├── App.js
+│   │   │   ├── index.js
+│   │   │   └── ...other frontend files...
+│   │   ├── public/
+│   │   │   ├── index.html
+│   │   │   └── ...other public files...
+│   │   ├── package.json
+│   │   └── ...other frontend files...
+│   ├── README.md
+│   └── ...other files...
 ```
 
 ## Technologies Used
