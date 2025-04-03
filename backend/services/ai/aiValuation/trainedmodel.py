@@ -33,6 +33,7 @@ print("Mean Squared Error:", mse)
 model_path = "ip_valuation_model.pkl"
 scaler_path = "scaler.pkl"
 with open(model_path, "wb") as model_file, open(scaler_path, "wb") as scaler_file:
+    4
     pickle.dump(model, model_file)
     pickle.dump(scaler, scaler_file)
 print(f"Model saved as {model_path}")
